@@ -2,7 +2,7 @@
 
 *`-file=[path-to-sln-file]`*
 
-Example: `-file=e:\code\test\test.sln`
+Example: `MakeItSo -file=e:\code\test\test.sln`
 
 !MakeItSo will convert the solution file specified. The converted makefile will go into the solution's root folder, and not into the working directory that the command was issued from.
 
