@@ -1,0 +1,14 @@
+#summary What to do if you have a solution that cannot be converted by MakeItSo
+
+
+
+(solution converter, not code converter)
+
+(send simplified version of solution)
+
+(not all solutions supported, e.g. .NET projects with v1)
+
+(custom build steps, or pre- and post- build steps not yet supported)
+
+(two types of problem: bug vs wishlist)
+(do same for both)
