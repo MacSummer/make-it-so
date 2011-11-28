@@ -1,1 +1,7 @@
 #summary MakeItSo command-line options
+
+*-file=[path-to-sln-file]*
+
+Example: `-file=e:\code\test\test.sln`
+
+Tells !MakeItSo to convert the solution file specified. If the `-file` parameter is not passed on the command-line, !MakeItSo will look for a `.sln` file in the working folder.
