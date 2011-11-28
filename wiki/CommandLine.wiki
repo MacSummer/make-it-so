@@ -4,4 +4,6 @@
 
 Example: `-file=e:\code\test\test.sln`
 
-!MakeItSo will convert the solution file specified. If the `-file` parameter is not passed on the command-line, !MakeItSo will look for a `.sln` file in the working folder.
+!MakeItSo will convert the solution file specified. The converted makefile will go into the solution's root folder, and not into the working directory that the command was issued from.
+
+If the `-file` parameter is not passed on the command-line, !MakeItSo will look for a `.sln` file in the working folder.
