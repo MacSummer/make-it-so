@@ -1,6 +1,6 @@
 #summary How to use the MakeItSo.config file.
 
 ===Overview===
-To convert some solutions into makefiles, MakeItSo needs extra information given to it that it cannot get from the Visual Studio files. You can provide this information in a `MakeItSo.config` file.
+To convert some solutions into makefiles, !MakeItSo needs extra information given to it that it cannot get from the Visual Studio files. You can provide this information in a `MakeItSo.config` file.
 
 !MakeItSo can convert many simple Visual Studio solutions without needing any extra information. 
