@@ -1,7 +1,7 @@
 #summary Development timeline for MakeItSo
 
-|| *Date*       || *Version* || *Main features* ||
-|| End Nov 2011 || 1.0       || Converts Visual Studio 2008 solutions ||
-|| Mid Dec 2011 || 1.1       || Visual Studio 2010 support ||
-|| (no date)    || 1.2       || Custom build steps ||
-|| (no date)    || 2.0       || C# mono support ||
+|| *Date*    || *Version* || *Main features* ||
+|| Nov 2011  || 1.0       || Converts Visual Studio 2008 solutions ||
+|| Dec 2011  || 1.1       || Visual Studio 2010 support ||
+|| (no date) || 1.2       || Custom build steps ||
+|| (no date) || 2.0       || C# mono support ||
