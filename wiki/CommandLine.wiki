@@ -1,6 +1,6 @@
 #summary MakeItSo command-line options
 
-*-file=\[path-to-sln-file\]*
+*`-file=[path-to-sln-file]`*
 
 Example: `-file=e:\code\test\test.sln`
 
