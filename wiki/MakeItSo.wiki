@@ -1,7 +1,7 @@
 #summary Overview of MakeItSo
 
   * The [CommandLine MakeItSo command line]
-  * The [MakeItSoConfig `MakeItSo.config` file]
+  * The [MakeItSoConfig MakeItSo.config file]
 
 (you need to have VS installed)
 
