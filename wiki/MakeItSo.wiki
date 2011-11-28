@@ -1,3 +1,5 @@
 #summary Overview of MakeItSo
 
+  * The [CommandLine !MakeItSo command line]
+
 (you need to have VS installed)
