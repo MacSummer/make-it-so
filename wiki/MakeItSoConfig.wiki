@@ -3,4 +3,4 @@
 ===Overview===
 To convert some solutions into makefiles, !MakeItSo needs extra information given to it that it cannot get from the Visual Studio project and solution files. You can provide this information in a `MakeItSo.config` file.
 
-!MakeItSo can convert many simple Visual Studio solutions without needing any extra information. 
+!MakeItSo can convert many simple Visual Studio solutions without needing any extra information. If a solution is 'self-contained' then it should be able to be converted without any extra information being needed. A self-contained solution is one which contains all its dependencies (for example libraries) as projects within the solution.
