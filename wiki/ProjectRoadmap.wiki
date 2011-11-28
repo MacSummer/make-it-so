@@ -1,0 +1,5 @@
+#summary Development timeline for MakeItSo
+
+|| *Date*       || *Version*    || *Main features* ||
+|| End Nov 2011 || MakeItSo 1.0 || Converts Visual Studio 2008 solutions ||
+
