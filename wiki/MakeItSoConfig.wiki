@@ -3,4 +3,16 @@
 ===Overview===
 To convert some solutions into makefiles, !MakeItSo needs extra information given to it that it cannot get from the Visual Studio project and solution files. You can provide this information in a `MakeItSo.config` file.
 
+*'Self-contained solutions'*
+
 !MakeItSo can convert many simple Visual Studio solutions without needing any extra information. If a solution is 'self-contained' then it should be able to be converted without any extra information being needed. A self-contained solution is one which contains all its dependencies (for example libraries) as projects within the solution.
+
+Some solutions are not self-contained. They link in 'external' libraries that are not built as part of the solution itself. If these are provided as pre-built Windows libraries, you will not be able to build them into a Linux version of the build. You will need to tell the Linux version to use pre-build Linux versions of these external libraries instead.
+
+*The `MakeItSo.config` file*
+
+The `MakeItSo.config` file lets you tell the build to:
+  * Remove specified Windows libraries and use Linux versions instead.
+  * Use different include paths for the Linux build.
+  * Remove pre-processor definitions, and replace them with others.
+  * Remove compiler flags and replace them with others.
