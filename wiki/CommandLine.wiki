@@ -13,6 +13,6 @@ If the `-file` parameter is not provided, !MakeItSo will look for a `.sln` file 
 
 Example: `MakeItSo -cygwin=true`
 
-!MakeItSo will create a makefile that builds a cygwin project. In particular, shared-objects projects are build as `.dll` files instead of `.so` files.
+If this is set to `true`, !MakeItSo will create a makefile that builds a cygwin project. In particular, shared-objects projects are build as `.dll` files instead of `.so` files.
 
 If the `-cygwin` parameter is not provided, !MakeItSo defaults to a Linux (ie, non-cygwin) build .
