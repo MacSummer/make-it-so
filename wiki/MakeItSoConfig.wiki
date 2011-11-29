@@ -24,7 +24,6 @@ In most cases, the !MakeItSo.config file specifies settings to add or remove rat
 
 
 ===!MakeItSo.config file format===
-The file format:
 {{{
 <MakeItSo>
   
