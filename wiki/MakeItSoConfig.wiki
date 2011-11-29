@@ -23,6 +23,25 @@ Some solutions are not self-contained. They link in 'external' libraries that ar
 In most cases, the MakeItSo.config specifies settings to add or remove rather than specifying replacements. This lets you replace a single Windows library with more than one Linux library if there is not a one-to-one match, for example. Or you could add a preprocessor definition to the Linux build without removing an existing one.
 
 
+===MakeItSo.config file format===
+An example file format:
+{{{
+<MakeItSo>
+  
+  <!-- Settings that apply to all projects in the solution -->
+  <AllProjects>
+
+  </AllProjects>
+
+  <!-- Settings for the specific named projects -->
+  <Project name="App">
+
+  </Project>
+  
+</MakeItSo>
+}}}
+
+
 ===Add and remove libraries===
 If a solution links in Windows-specific external libraries you will need 
 to replace these with Linux equivalents. For example:
