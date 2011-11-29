@@ -33,7 +33,7 @@ An example file format:
 
   </AllProjects>
 
-  <!-- Settings for the specific named projects -->
+  <!-- Settings for specific named projects -->
   <Project name="App">
 
   </Project>
