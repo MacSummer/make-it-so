@@ -43,6 +43,12 @@ Paths are specified relative to the solution root folder.
 
 
 ===Add and remove preprocessor definitions===
-You can add and remove preprocessor definitions.
+You can add and remove preprocessor definitions. For example:
+{{{
+    <RemovePreprocessorDefinition definition="TO_REPLACE" />
+    <AddPreprocessorDefinition configuration="Debug" definition="REPLACEMENT_DEBUG" />
+    <AddPreprocessorDefinition configuration="Release" definition="REPLACEMENT_RELEASE" />
+}}}
+MakeItSo automatically removes `WIN32` and adds `GCC_BUILD`. 
 
 ===Add and remove compiler flags===
