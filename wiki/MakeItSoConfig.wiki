@@ -44,7 +44,7 @@ Any settings in the `<AllProjects>` section apply to all projects in the solutio
 
 
 ===Add and remove libraries===
-If a solution links in Windows-specific external libraries you will need 
+If a project links in Windows-specific external libraries you will need 
 to replace these with Linux equivalents. For example:
 {{{
     <RemoveLibrary library="TextLibrary.lib"/>
