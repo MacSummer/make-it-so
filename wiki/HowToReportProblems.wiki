@@ -14,7 +14,7 @@ If you have a solution that cannot be correctly converted to a makefile, please:
 
   * Create a simplified version of the solution. Please do not send a large, complex solution. It will be much more useful if you can create a small solution that is as simple as possible, but which illustrates the problem. For example, see the sample solutions in the `Tests/TestProjects` folder of the !MakeItSo source code.
 
-  * Create an Issue and attach the simplified solution to it.
+  * Create an Issue and attach the simplified solution to it. I will add it to the development plan.
 
 ===Or, fix it yourself...===
 !MakeItSo is open-source of course, so feel free to download the code and fix any problems yourself. If you do this, please mail the fix or raise an issue and attach your code. Please let me know if you would like to become a contributor to the project.
