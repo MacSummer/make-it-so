@@ -20,9 +20,7 @@ Some solutions are not self-contained. They link in 'external' libraries that ar
 
 ===Add and remove libraries===
 If a solution links in Windows-specific external libraries you will need 
-to replace these with Linux equivalents. When adding a library you need to specify a configuration.
-
-For example:
+to replace these with Linux equivalents. When adding a library you need to specify a configuration. For example:
 {{{
     <RemoveLibrary library="TextLibrary.lib"/>
     <AddLibrary configuration="Debug" library="libTextLibD.a"/>
@@ -30,6 +28,14 @@ For example:
 }}}
 
 ===Add and remove library paths===
+If you are replacing libraries, you may need to replace library paths as well. For example:
+{{{
+    <RemoveLibraryPath path="Externals/TextLibrary/Libs/Windows x86/Debug"/>
+    <RemoveLibraryPath path="Externals/TextLibrary/Libs/Windows x86/Release"/>
+    <AddLibraryPath configuration="Debug" path="Externals/TextLibrary/libs/gcc/Debug"/>
+    <AddLibraryPath configuration="Release" path="Externals/TextLibrary/libs/gcc/Release"/>
+}}}
+Paths are specified relative to the solution root folder. 
 
 
 ===Add and remove preprocessor definitions===
