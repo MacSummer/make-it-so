@@ -18,9 +18,13 @@ The `MakeItSo.config` file lets you tell the build to:
 Some solutions are not self-contained. They link in 'external' libraries that are not built as part of the solution itself. If these are provided as pre-built Windows libraries, you will not be able to build them into a Linux version of the build. You will need to tell the Linux version to use pre-build Linux versions of these external libraries instead.
 
 
+*Add and remove vs. replace*
+In most cases, the MakeItSo.config specifies settings to add or remove rather than specifying replacements. This lets you replace a single Windows library with more than one Linux library if there is not a one-to-one match, for example. Or you could add a preprocessor definition to the Linux build without removing an existing one.
+
+
 ===Add and remove libraries===
 If a solution links in Windows-specific external libraries you will need 
-to replace these with Linux equivalents. When adding a library you need to specify a configuration. For example:
+to replace these with Linux equivalents. For example:
 {{{
     <RemoveLibrary library="TextLibrary.lib"/>
     <AddLibrary configuration="Debug" library="libTextLibD.a"/>
@@ -39,6 +43,6 @@ Paths are specified relative to the solution root folder.
 
 
 ===Add and remove preprocessor definitions===
-
+You can add and remove preprocessor definitions.
 
 ===Add and remove compiler flags===
