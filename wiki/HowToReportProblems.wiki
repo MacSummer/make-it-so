@@ -12,7 +12,7 @@ Before reporting a problem please note that:
 ===Reporting a problem===
 If you have a solution that cannot be correctly converted to a makefile, please:
 
-  * Create a simplified version of the solution. Please do not send a large, complex solution. It will be much more useful if you can create a small solution that is as simple as possible, but which illustrates the problem. For example, see the sample solutions in `Tests/TestProjects` folder of the !MakeItSo source code.
+  * Create a simplified version of the solution. Please do not send a large, complex solution. It will be much more useful if you can create a small solution that is as simple as possible, but which illustrates the problem. For example, see the sample solutions in the `Tests/TestProjects` folder of the !MakeItSo source code.
 
   * Create an Issue and attach the simplified solution to it.
 
