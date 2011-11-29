@@ -19,7 +19,15 @@ Some solutions are not self-contained. They link in 'external' libraries that ar
 
 
 ===Add and remove libraries===
+If a solution links in Windows-specific external libraries you will need 
+to replace these with Linux equivalents. When adding a library you need to specify a configuration.
 
+For example:
+{{{
+    <RemoveLibrary library="TextLibrary.lib"/>
+    <AddLibrary configuration="Debug" library="libTextLibD.a"/>
+    <AddLibrary configuration="Release" library="libTextLibR.a"/>
+}}}
 
 ===Add and remove library paths===
 
