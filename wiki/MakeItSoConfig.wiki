@@ -4,10 +4,13 @@
 To convert some solutions into makefiles, !MakeItSo needs extra information given to it that it cannot get from the Visual Studio project and solution files. You can provide this information in a `MakeItSo.config` file.
 
 The `MakeItSo.config` file lets you tell the build to:
+
   * [MakeItSoConfig#Add_and_remove_libraries Remove specified Windows libraries and use Linux versions instead.]
-  * Use different include paths for the Linux build.
-  * Remove pre-processor definitions, and replace them with others.
-  * Remove compiler flags and replace them with others.
+
+  * [MakeItSoConfig#Add_and_remove_library_paths Use different include paths for the Linux build.]
+  * [MakeItSoConfig#Add_and_remove_preprocessor_definitions Remove pre-processor definitions, and replace them with others.]
+
+  * [MakeItSoConfig#Add_and_remove_compiler_flags Remove compiler flags and replace them with others.]
 
 
 *'Self-contained solutions'*
