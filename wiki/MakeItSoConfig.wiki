@@ -24,7 +24,7 @@ In most cases, the MakeItSo.config specifies settings to add or remove rather th
 
 
 ===MakeItSo.config file format===
-An example file format:
+The file format:
 {{{
 <MakeItSo>
   
@@ -40,6 +40,8 @@ An example file format:
   
 </MakeItSo>
 }}}
+
+Any settings in the `<AllProjects>` section apply to all projects in the solution, unless there is a specific `<Project name="[name]">` section for the project. If there are specific settings for a project, it must contain all settings for that project. Specific projects do not inherit properties from the `<AllProjects>` section.
 
 
 ===Add and remove libraries===
