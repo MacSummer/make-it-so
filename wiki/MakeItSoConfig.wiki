@@ -20,7 +20,7 @@ Some solutions are not self-contained. They link in 'external' libraries that ar
 
 *Add and remove vs. replace*
 
-In most cases, the MakeItSo.config specifies settings to add or remove rather than specifying replacements. This lets you replace a single Windows library with more than one Linux library if there is not a one-to-one match, for example. Or you could add a preprocessor definition to the Linux build without removing an existing one.
+In most cases, the !MakeItSo.config specifies settings to add or remove rather than specifying replacements. This lets you replace a single Windows library with more than one Linux library if there is not a one-to-one match, for example. Or you could add a preprocessor definition to the Linux build without removing an existing one.
 
 
 ===`MakeItSo.config` file format===
