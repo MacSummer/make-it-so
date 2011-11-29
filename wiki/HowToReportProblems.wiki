@@ -16,5 +16,5 @@ If you have a solution that cannot be correctly converted to a makefile, please:
 
   * Create an Issue and attach the simplified solution to it.
 
-===Or, fix it yourself!===
+===Or, fix it yourself...===
 !MakeItSo is open-source of course, so feel free to download the code and fix any problems yourself. If you do this, please mail the fix or raise an issue and attach your code. Please let me know if you would like to become a contributor to the project.
