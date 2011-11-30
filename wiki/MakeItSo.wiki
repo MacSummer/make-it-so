@@ -27,4 +27,4 @@ To perform continuous conversion of solutions that need extra information, you c
 
 
 ===Contributing===
-Please get in touch with me if you would like to contribute to the project.
+Please get in touch if you would like to contribute to the project.
