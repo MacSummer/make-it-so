@@ -2,7 +2,7 @@
 
 *!MakeItSo (with no parameters)*
 
-If you run `MakeItSo` with no command-line parameters, it will look for a `.sln` file in the working directory and convert it.
+If you run `MakeItSo` with no command-line parameters, it will look for a `.sln` file in the working directory and convert it and the projects it contains.
 
 *`-file=[path-to-sln-file]`*
 
