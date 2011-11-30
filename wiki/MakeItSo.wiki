@@ -9,22 +9,22 @@
   * Libraries that link in dependent libraries.
 See the [ProjectRoadmap project roadmap] for details of when these features are expected.
 
+===Links to further details===
+
+  * [CommandLine The MakeItSo command line].
+  * [MakeItSoConfig MakeItSo.config file]: How to convert more complex projects that need extra information.
+  * [BuildingForCygwin Building for cygwin].
+
+
+=== One-off vs. continuous conversion===
 There are two main ways you can use !MakeItSo:
   * A one-off conversion of a solution, so that you can then maintain the makefile manually after that.
   * Continue working in Visual Studio, and continually convert the solution to a makefile to cross-compile for Linux.
 
 Many solutions can be converted by !MakeItSo with no extra information needed. But for some projects you may need or want to provide extra information that is not found in the Visual Studio solution or project files. For example, you may want to change preprocessor definitions or libraries and library paths. 
 
+To perform continuous conversion of solutions that need extra information, you can provide a `MakeItSo.config` file.
+
+
 ===Contributing===
 Please get in touch with me if you would like to contribute to the project.
-
-
-===Links to further details===
-
-  * The [CommandLine MakeItSo command line]
-
-  * How to convert more complex solutions using the [MakeItSoConfig MakeItSo.config file]
-
-(you need to have VS installed)
-
-(cygwin)
