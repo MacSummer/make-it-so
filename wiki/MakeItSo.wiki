@@ -1,7 +1,29 @@
 #summary Overview of MakeItSo
 
+===Overview===
+!MakeItSo converts Visual Studio solutions to gcc makefiles. Its aim is to support all recent versions of Visual Studio, and to be able to convert many types of projects including:
+  * VS2008 and VS2010 support.
+  * C and C++ executables, static libraries and dlls.
+  * C# executables and class-library assemblies.
+  * Projects with libraries linked implicitly via project dependencies.
+  * Libraries that link in dependent libraries.
+See the [ProjectRoadmap project roadmap] for details of when these features are expected.
+
+There are two main ways you can use !MakeItSo:
+  * A one-off conversion of a solution, so that you can then maintain the makefile manually after that.
+  * Continue working in Visual Studio, and continually convert the solution to a makefile to cross-compile for Linux.
+
+Many solutions can be converted by !MakeItSo with no extra information needed. But for some projects you may need or want to provide extra information that is not found in the Visual Studio solution or project files. For example, you may want to change preprocessor definitions or libraries and library paths. 
+
+===Contributing===
+Please get in touch with me if you would like to contribute to the project.
+
+
+===Links to further details===
+
   * The [CommandLine MakeItSo command line]
-  * The [MakeItSoConfig MakeItSo.config file]
+
+  * How to convert more complex solutions using the [MakeItSoConfig MakeItSo.config file]
 
 (you need to have VS installed)
 
