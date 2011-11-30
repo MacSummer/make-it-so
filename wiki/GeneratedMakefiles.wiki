@@ -13,9 +13,6 @@ The master makefile contains these targets:
 *Project-specific makefiles*
 
 Project makefiles contain these targets:
-  * A default target that builds all configurations (Debug, Release etc) for the project. 
-You can build this by running `make -f [project-name].makefile`
-  * A target for each configuration. 
-You can build this by running `make -f [project-name].makefile [configuration-name]`
-  * A 'clean' target which cleans all intermediate and output file for the project. 
-You invoke this with `make -f [project-name].makefile clean`
+  * A default target that builds all configurations (Debug, Release etc) for the project. You can build this by running `make -f [project-name].makefile`
+  * A target for each configuration. You can build this by running `make -f [project-name].makefile [configuration-name]`
+  * A 'clean' target which cleans all intermediate and output file for the project. You invoke this with `make -f [project-name].makefile clean`
