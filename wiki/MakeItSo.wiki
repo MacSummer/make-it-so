@@ -18,8 +18,8 @@ See the [ProjectRoadmap project roadmap] for details of when these features are 
 
 === One-off vs. continuous conversion===
 There are two main ways you can use !MakeItSo:
-  * A one-off conversion of a solution, so that you can then maintain the makefile manually after that.
-  * Continue working in Visual Studio, and continually convert the solution to a makefile to cross-compile for Linux.
+  * One-off conversion of a solution, so that you can then maintain the makefile manually after that.
+  * Working in Visual Studio, and continually converting the solution to a makefile to cross-compile for Linux.
 
 Many solutions can be converted by !MakeItSo with no extra information needed. But for some projects you may need or want to provide extra information that is not found in the Visual Studio solution or project files. For example, you may want to change preprocessor definitions or libraries and library paths. 
 
