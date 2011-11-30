@@ -1,5 +1,9 @@
 #summary MakeItSo command-line options
 
+*!MakeItSo (with no parameters)*
+
+If you run `MakeItSo` with no command-line parameters, it will look for a `.sln` file in the working directory and convert it.
+
 *`-file=[path-to-sln-file]`*
 
 Example: `MakeItSo -file=e:\code\test\test.sln`
