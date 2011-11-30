@@ -8,7 +8,7 @@
 The master makefile contains these targets:
   * A default target that builds all projects in the solution. You can build this by running `make` with no parameters. 
   * A target for each project in the solution. You can build this by running `make [project-name]`.
-  * A 'clean' target which cleans all the intermediate and output files for all projects in the solution. You invoke this with `make clean'
+  * A 'clean' target which cleans all the intermediate and output files for all projects in the solution. You invoke this with `make clean`
 
 *Project-specific makefiles*
 
