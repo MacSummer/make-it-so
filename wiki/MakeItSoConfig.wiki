@@ -6,7 +6,8 @@ To convert some solutions into makefiles, !MakeItSo needs extra information give
 The `MakeItSo.config` file lets you tell the build to:
 
   * [MakeItSoConfig#Add_and_remove_libraries Remove specified Windows libraries and use Linux versions instead.]
-  * [MakeItSoConfig#Add_and_remove_library_paths Use different include paths for the Linux build.]
+  * [MakeItSoConfig#Add_and_remove_library_paths Use different library paths for the Linux build.]
+  * [MakeItSoConfig#Add_and_remove_include_paths Use different include paths for the Linux build.]
   * [MakeItSoConfig#Add_and_remove_preprocessor_definitions Remove pre-processor definitions, and replace them with others.]
   * [MakeItSoConfig#Add_and_remove_compiler_flags Remove compiler flags and replace them with others.]
 
@@ -59,6 +60,16 @@ If you are replacing libraries, you may need to replace library paths as well. F
     <RemoveLibraryPath path="Externals/TextLibrary/Libs/Windows x86/Release"/>
     <AddLibraryPath configuration="Debug" path="Externals/TextLibrary/libs/gcc/Debug"/>
     <AddLibraryPath configuration="Release" path="Externals/TextLibrary/libs/gcc/Release"/>
+}}}
+Paths are specified relative to the solution root folder. 
+
+
+===Add and remove include paths===
+You may want to use different include paths with a Linux build. For example:
+{{{
+    <RemoveIncludePath path="Include/WindowsTemplates"/>
+    <AddIncludePath configuration="Debug" path="Include/gccTemplates"/>
+    <AddIncludePath configuration="Release" path="Include/gccTemplates"/>
 }}}
 Paths are specified relative to the solution root folder. 
 
