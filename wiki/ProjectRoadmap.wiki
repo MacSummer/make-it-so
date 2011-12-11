@@ -2,6 +2,6 @@
 
 || *Status*    || *Date*    || *Version* || *Main features* ||
 || Released    || Nov 2011  || 1.0       || Convert VS 2008 solutions ||
-|| In progress || Dec 2011  || 1.1       || Convert VS 2010 solutions ||
-||             || (no date) || 1.2       || Custom build steps ||
-||             || (no date) || 2.0       || C# mono support ||
+|| In progress || Dec 2011  || 1.1       || C# mono support ||
+||             || Jan 2012  || 1.2       || Convert VS 2010 solutions ||
+||             || (no date) || 1.3       || Custom build steps ||
