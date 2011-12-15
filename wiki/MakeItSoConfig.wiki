@@ -14,7 +14,7 @@ The `MakeItSo.config` file lets you tell the build to:
 
 *'Self-contained solutions'*
 
-!MakeItSo can convert many simple Visual Studio solutions without needing any extra information. If a solution is 'self-contained' then it should be able to be converted without any extra information being needed. A self-contained solution is one which contains all its dependencies (for example libraries) as projects within the solution.
+!MakeItSo can convert many Visual Studio solutions without needing any extra information. If a solution is 'self-contained' then it should be able to be converted without any extra information being needed. A self-contained solution is one which contains all its dependencies (for example libraries) as projects within the solution.
 
 Some solutions are not self-contained. They link in 'external' libraries that are not built as part of the solution itself. If these are provided as pre-built Windows libraries, you will not be able to build them into a Linux version of the build. You will need to tell the Linux version to use pre-build Linux versions of these external libraries instead.
 
