@@ -4,6 +4,7 @@
 The code for shared-objects libraries in gcc is simpler than the code for Windows DLLs. For example, Windows has a DllMain() function and DLL_EXPORT declaration on functions. These are not needed for gcc. This page has a few notes on how to make DLLs so that they can be compiled on Windows and also port to gcc.
 
 *DLL_EXPORT*
+
 You need to undefine DLL_EXPORT for gcc builds. Include these lines before DLL_EXPORT is used. For example in header files that declare exported functions:
 {{{
 #ifdef WIN32
