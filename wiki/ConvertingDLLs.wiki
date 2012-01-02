@@ -1,7 +1,7 @@
 #summary How to convert DLLs so that they will build as gcc .so libraries.
 
 === Overview ===
-The code for shared-objects libraries in gcc is simpler than the code for Windows DLLs. For example, Windows has a DllMain() function and DLL_EXPORT declaration on functions. These are not needed for gcc. This page has a few notes on how to make DLLs so that they can be compiled on Windows and also port to gcc.
+The code for shared-objects libraries in gcc is simpler than the code for Windows DLLs. For example, Windows has a !DllMain() function and DLL_EXPORT declaration on functions. These are not needed for gcc. This page has a few notes on how to make DLLs so that they can be compiled on Windows and also port to gcc.
 
 *DLL_EXPORT*
 
@@ -37,7 +37,7 @@ You do not need many (if any) of the things in stdafx.h, so you can conditionall
 
 *dllmain.cpp*
 
-You do not need the DllMain() function in gcc, so you can conditionally compile it only under Windows. For example:
+You do not need the !DllMain() function in gcc, so you can conditionally compile it only under Windows. For example:
 {{{
 #ifdef WIN32
 
