@@ -1,0 +1,4 @@
+#summary How to convert DLLs so that they will build as gcc .so libraries.
+
+=== Overview ===
+The code for shared-objects libraries in gcc is simpler than the code for Windows DLLs. For example, Windows has a DllMain() function and DLL_EXPORT declaration on functions. These are not needed for gcc. This page has a few notes on how to make DLLs so that they can be compiled on Windows and also port to gcc.
