@@ -16,6 +16,7 @@ See the [ProjectRoadmap project roadmap] for details of when these features are 
   * [MakeItSoConfig How to convert more complex projects that need extra information provided as a MakeItSo.config file.]
   * [BuildingForCygwin Building for cygwin.]
   * [PathsWithSpaces Paths with spaces.]
+  * [ConvertingDLLs Converting DLLs to build as Linux shared-objects libraries]
 
 
 === One-off vs. continuous conversion===
