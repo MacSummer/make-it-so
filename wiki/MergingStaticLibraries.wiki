@@ -12,5 +12,12 @@ In the examples below we are imagining that we have two static libraries: mammal
   * In animals.lib's project linker settings, set Link Library Dependencies to true.
   * You need to have some code in animals.lib, otherwise it won't build. If you have no code to add, you can add an empty dummy.cpp/.h class.
 
+When you build animals.lib, the resulting library will include the code from the two other libraries.
+
 === Visual Studio 2010 ===
-VS2010 has the option to Link Library Dependencies like VS2008, but it doesn't seem to work. In many cases VS2010 uses References instead of dependencies
+VS2010 has the option to Link Library Dependencies like VS2008, but it doesn't seem to work. In many cases VS2010 uses References instead of dependencies, but this doesn't work in this case. Instead you should:
+  * Create an animals.lib static library project
+  * Set up the project dependencies so that animals.lib depends on mammals.lib and dinosaurs.lib.
+  * In animals.lib's project linker settings, set Link Library Dependencies to true.
+  * Add a post-build step to link the libraries together. This will look something like this: `lib /out:Debug\animals.lib Debug\mammals.lib Debug\dinosaurs.lib`
+  * (You do not need any dummy code in VS2010.)
