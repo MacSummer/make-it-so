@@ -17,6 +17,7 @@ See the [ProjectRoadmap project roadmap] for details of when these features are 
   * [BuildingForCygwin Building for cygwin.]
   * [PathsWithSpaces Paths with spaces.]
   * [ConvertingDLLs Converting DLLs to build as gcc shared-objects libraries]
+  * [MergingStaticLibraries Merging static libraries]
 
 
 === One-off vs. continuous conversion===
