@@ -1,0 +1,6 @@
+#summary How to merge static libraries in VS2008 and VS2010
+
+=== Overview ===
+Sometimes you want to merge a number of static libraries into one. VS2008 and VS2010 handle this differently to each other. This page describes the differences, and how to make sure that !MakeItSo can generate the correct makefile in this case.
+
+=== Visual Studio 2008 ===
