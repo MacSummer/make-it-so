@@ -19,5 +19,11 @@ VS2010 has the option to Link Library Dependencies like VS2008, but it doesn't s
   * Create an animals.lib static library project
   * Set up the project dependencies so that animals.lib depends on mammals.lib and dinosaurs.lib.
   * In animals.lib's project linker settings, set Link Library Dependencies to true.
-  * Add a post-build step to link the libraries together. This will look something like this: `lib /out:Debug\animals.lib Debug\mammals.lib Debug\dinosaurs.lib`
+  * Add a post-build step to link the libraries together. This will look something like this: 
+`lib /out:Debug\animals.lib Debug\mammals.lib Debug\dinosaurs.lib`
+(You could make a clever version of this that uses the project folder variables to build the debug and release versions from the same instruction.)
   * (You do not need any dummy code in VS2010.)
+
+This is really doing two different things: 
+  * The post-build step works in the Visual Studio build.
+  * The Link Library Dependencies does not do anything in the Visual Studio build, but it does tell !MakeItSo to link the libraries together.
