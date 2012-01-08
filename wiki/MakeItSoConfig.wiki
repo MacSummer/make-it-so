@@ -109,3 +109,7 @@ You can specify alternative compilers for any one of these languages. For exampl
 
 
 === Convert a static library to a shared-objects library ===
+By default !MakeItSo converts static libraries to static libraries, and DLLs to shared-objects. But you can specify that static libraries are converted into shared-objects libraries:
+{{{
+    <ConvertStaticLibraryToSharedObjects convert="true"/>
+}}}
