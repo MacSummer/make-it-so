@@ -94,7 +94,7 @@ You can add and remove compiler flags. For example:
 
 
 === Specify an alternative compiler ===
-By default !MakeItSo will use these compilers:
+By default !MakeItSo will use the default installation of these compilers:
   * gcc for C files
   * g++ for C++ files
   * gmcs for C# files
