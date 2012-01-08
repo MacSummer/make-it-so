@@ -94,3 +94,14 @@ You can add and remove compiler flags. For example:
 
 
 === Specify an alternative compiler ===
+By default !MakeItSo will use these compilers:
+  * gcc for C files
+  * g++ for C++ files
+  * gmcs for C# files
+
+You can specify alternative compilers for any one of these languages. For example:
+{{{
+       <CSharpCompiler compiler="dmcs"/>
+       <CCompiler compiler="gcc2.1"/>
+       <CPPCompiler compiler="g++4.3"/>
+}}}
