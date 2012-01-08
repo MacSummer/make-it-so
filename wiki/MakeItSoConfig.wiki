@@ -10,6 +10,7 @@ The `MakeItSo.config` file lets you tell the build to:
   * [MakeItSoConfig#Add_and_remove_include_paths Use different include paths for the Linux build.]
   * [MakeItSoConfig#Add_and_remove_preprocessor_definitions Remove pre-processor definitions, and replace them with others.]
   * [MakeItSoConfig#Add_and_remove_compiler_flags Remove compiler flags and replace them with others.]
+  * [MakeItSoConfig#Specify_an_alternative_compiler Specify an alternative compiler.]
 
 
 *'Self-contained solutions'*
@@ -83,9 +84,13 @@ You can add and remove preprocessor definitions. For example:
 }}}
 !MakeItSo automatically removes `WIN32` and adds `GCC_BUILD`. 
 
+
 ===Add and remove compiler flags===
 You can add and remove compiler flags. For example:
 {{{
     <RemoveCompilerFlag flag="-O2"/>
     <AddCompilerFlag configuration="Release" flag="-O3"/>
 }}}
+
+
+=== Specify an alternative compiler ===
