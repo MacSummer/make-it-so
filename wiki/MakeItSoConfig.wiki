@@ -109,7 +109,7 @@ You can specify alternative compilers for any one of these languages. For exampl
 
 
 === Convert a static library to a shared-objects library ===
-By default !MakeItSo converts static libraries to static libraries, and DLLs to shared-objects libraries. You can specify that static libraries are converted into shared-objects libraries:
+By default !MakeItSo converts Windows static libraries to Linux static libraries, and Windows DLLs to Linux shared-objects libraries. You can specify that Windows static libraries are converted into Linux shared-objects libraries instead:
 {{{
     <ConvertStaticLibraryToSharedObjects convert="true"/>
 }}}
