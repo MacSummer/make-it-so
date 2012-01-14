@@ -12,6 +12,7 @@ The `MakeItSo.config` file lets you tell the build to:
   * [MakeItSoConfig#Add_and_remove_compiler_flags Remove compiler flags and replace them with others.]
   * [MakeItSoConfig#Specify_an_alternative_compiler Specify an alternative compiler.]
   * [MakeItSoConfig#Convert_a_static_library_to_a_shared-objects_library Convert a static library to a shared-objects library.]
+  * [MakeItSoConfig#Ignoring_a_project Ignoring a project]
 
 
 *'Self-contained solutions'*
@@ -113,3 +114,6 @@ By default !MakeItSo converts Windows static libraries to Linux static libraries
 {{{
     <ConvertStaticLibraryToSharedObjects convert="true"/>
 }}}
+
+
+=== Ignoring a project ===
