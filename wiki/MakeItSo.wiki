@@ -7,7 +7,7 @@
   * C# executables and class-library assemblies.
   * Projects with libraries linked implicitly via project dependencies.
   * Libraries that link in dependent libraries.
-See the [ProjectRoadmap project roadmap] for details of when these features are expected.
+See the [ProjectRoadmap project roadmap] the current state of the project.
 
 ===Links to further details===
 
