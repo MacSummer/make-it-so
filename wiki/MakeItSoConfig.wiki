@@ -117,9 +117,9 @@ By default !MakeItSo converts Windows static libraries to Linux static libraries
 
 
 === Ignoring a project ===
-You make have a project in the solution that cannot be converted and which should be excluded from the Linux makefiles. You can specify that projects can be ignored in the main part of the config file, ie outside the '<AllProjects>' or project-specific sections. For example:
+You make have a project in the solution that cannot be converted and which should be excluded from the Linux makefiles. You can specify that projects can be ignored in the main part of the config file, ie outside the `<AllProjects>` or project-specific sections. For example:
 {{{
-    <MakeItSo>
-      <IgnoreProject project="App1"/>
-    </MakeItSo>
+<MakeItSo>
+  <IgnoreProject project="App1"/>
+</MakeItSo>
 }}}
