@@ -106,9 +106,26 @@ namespace MakeItSo
             m_file.WriteLine("# Compiler flags...");
 
             MakeItSoConfig_Project projectConfig = MakeItSoConfig.Instance.getProjectConfig(m_projectInfo.Name);
-            m_file.WriteLine("CPP_COMPILER = " + projectConfig.CPPCompiler);
+            m_file.Write("CPP_COMPILER = " + projectConfig.CPPCompiler);
+            createCompilerArgsList();
+
             m_file.WriteLine("C_COMPILER = " + projectConfig.CCompiler);
             m_file.WriteLine("");
+        }
+		
+		/// <summary>
+		///	Creates the build arguments string.
+		///	</summary>
+        private void createCompilerArgsList()
+        {
+            String ArgsString = "";
+
+            foreach(String Arg in MakeItSoConfig.Instance.getProjectConfig(m_projectInfo.Name).SolutionConfig.BuildArguments)
+            {
+                ArgsString += " -" + Arg;
+            }
+
+            m_file.WriteLine(ArgsString);
         }
 
         /// <summary>
@@ -526,7 +543,11 @@ namespace MakeItSo
 
                 // Creates a static library...
                 case ProjectInfo_CPP.ProjectTypeEnum.CPP_STATIC_LIBRARY:
-                    m_file.WriteLine("\tar rcs {0}/lib{1}.a {2} {3}", outputFolder, m_projectInfo.Name, objectFiles, implicitlyLinkedObjectFiles);
+					// We use the Target Name as the output file name if it exists
+                    if (configurationInfo.TargetName != "")
+                        m_file.WriteLine("\tar rcs {0}/lib{1}.a {2} {3}", outputFolder, configurationInfo.TargetName, objectFiles, implicitlyLinkedObjectFiles);
+                    else
+                        m_file.WriteLine("\tar rcs {0}/lib{1}.a {2} {3}", outputFolder, m_projectInfo.Name, objectFiles, implicitlyLinkedObjectFiles);
                     break;
 
 
@@ -622,7 +643,7 @@ namespace MakeItSo
             {
                 string intermediateFolder = getIntermediateFolder(configuration);
                 string outputFolder = getOutputFolder(configuration);
-                m_file.WriteLine("\tmkdir -p {0}", intermediateFolder);
+                m_file.WriteLine("\tmkdir -p {0}/source", intermediateFolder);
                 if (outputFolder != intermediateFolder)
                 {
                     m_file.WriteLine("\tmkdir -p {0}", getOutputFolder(configuration));

@@ -88,7 +88,10 @@ namespace MakeItSoLib
                     {
                         // We find the libraries that this executable depends on...
                         List<ImplicitLinkInfo> infos = new List<ImplicitLinkInfo>();
-                        findImplicitlyLinkedLibraries(infos);
+
+						// Commented as it generates wrong and not needed additional informations.
+						// Is it really needed if project properties are correctly filled?
+                        //findImplicitlyLinkedLibraries(infos);
 
                         // And add them to the library path...
                         foreach (ImplicitLinkInfo info in infos)

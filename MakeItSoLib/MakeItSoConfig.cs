@@ -96,6 +96,13 @@ namespace MakeItSoLib
             get { return m_cygwinBuild; }
         }
 
+		/// <summary>
+		/// Returns the list of build arguments
+        public List<String> BuildArguments
+        {
+            get { return m_buildArguments; }
+        }
+
         /// <summary>
         /// Returns config for the project passed in if we have specific config 
         /// for it. Returns the all-projects config if we don't.
@@ -185,6 +192,10 @@ namespace MakeItSoLib
                         parseCommandLine_Cygwin(value);
                         break;
 
+                    case "-build-args":
+                        parseCommandLine_BuildArgs(value);
+                        break;
+
                     default:
                         showHelp = true;
                         break;
@@ -198,9 +209,10 @@ namespace MakeItSoLib
                 Log.log("MakeItSo converts Visual Studio solutions to Linux gcc makefiles");
                 Log.log("See http://code.google.com/p/make-it-so/");
                 Log.log("Command-line:");
-                Log.log("  (empty command-line)   Converts the .sln file in the working folder, if there is one.");
-                Log.log("  -file=[solution-file]  Converts the solution specified.");
-                Log.log("  -cygwin=[True/False]   Creates a cygwin makefile if True. Defaults to False.");
+                Log.log("   (empty command-line)    Converts the .sln file in the working folder, if there is one.");
+                Log.log("   -file=[solution-file]   Converts the solution specified.");
+                Log.log("   -cygwin=[True/False]    Creates a cygwin makefile if True. Defaults to False.");
+                Log.log("   -build-args=[arg1,arg2,...]      Add build arguments to gcc");
 
                 m_convertSolution = false;
             }
@@ -231,6 +243,14 @@ namespace MakeItSoLib
             {
                 m_cygwinBuild = result;
             }
+        }
+
+		/// <summary>
+		/// Parses the build arguments list given by the user
+		/// </summary>
+        private void parseCommandLine_BuildArgs(string value)
+        {
+            m_buildArguments = Utils.split(value, ',');
         }
 
         /// <summary>
@@ -338,6 +358,9 @@ namespace MakeItSoLib
 
         // True if we are building for cygwin...
         private bool m_cygwinBuild = false;
+
+        // Build arguments to add
+        private List<String> m_buildArguments;
 
         // Will be set false if we can't parse the command-line...
         private bool m_convertSolution = true;

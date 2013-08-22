@@ -72,6 +72,15 @@ namespace MakeItSoLib
         }
 
         /// <summary>
+        /// Returns the target file name
+        /// </summary>
+        public string TargetName
+        {
+            get { return m_TargetName; }
+            set { m_TargetName = value.Replace(" ", ""); }
+        }
+
+        /// <summary>
         /// Gets the collection of include paths, relative to the 
         /// project's root folder.
         /// </summary>
@@ -274,6 +283,9 @@ namespace MakeItSoLib
         // The output folder for built objects such as libraries and executables...
         private string m_outputFolder = "";
         
+        // The output file name
+        private string m_TargetName = "";
+
         // The collection of include paths. (These are a list, as the order
         // may be important.)
         private List<string> m_includePaths = new List<string>();
