@@ -266,7 +266,7 @@ namespace SolutionParser_VS2010
                 return;
             }
 
-            List<string> additionalLibraryDirectories = Utils.split(strAdditionalLibraryDirectories, ';');
+            List<string> additionalLibraryDirectories = Utils.split(strAdditionalLibraryDirectories, ';', ',');
             foreach (string additionalLibraryDirectory in additionalLibraryDirectories)
             {
                 // The string may be quoted. We need to remove the quotes...
