@@ -97,9 +97,10 @@ namespace SolutionParser_VS2010
             //       same type of target. 
             m_projectInfo.ProjectType = parseConfiguration_Type(vcConfiguration);
 
-            // We get the intermediates folder and output folder...
+            // We get the intermediates and output folder, and the Target Name.
             configurationInfo.IntermediateFolder = parseConfiguration_Folder(vcConfiguration, () => (vcConfiguration.IntermediateDirectory));
             configurationInfo.OutputFolder = parseConfiguration_Folder(vcConfiguration, () => (vcConfiguration.OutputDirectory));
+            configurationInfo.TargetName = parseConfiguration_TargetName(vcConfiguration);
 
             // We get compiler settings, such as the include path and 
             // preprocessor definitions...
@@ -474,6 +475,17 @@ namespace SolutionParser_VS2010
             }
 
             return relativePath;
+        }
+		
+		/// <summary>
+		/// Gets the TargetName from the project and returns it
+		/// </summary>
+        private string parseConfiguration_TargetName(VCConfiguration vcConfiguration)
+        {
+            string[] PrimaryOutput = vcConfiguration.PrimaryOutput.Split('\\');
+            string[] TargetName = PrimaryOutput[PrimaryOutput.Length - 1].Split('.');
+         
+            return TargetName[0];
         }
 
         /// <summary>
