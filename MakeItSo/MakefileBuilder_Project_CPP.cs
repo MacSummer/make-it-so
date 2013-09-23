@@ -107,7 +107,7 @@ namespace MakeItSo
 
             MakeItSoConfig_Project projectConfig = MakeItSoConfig.Instance.getProjectConfig(m_projectInfo.Name);
             m_file.Write("CPP_COMPILER = " + projectConfig.CPPCompiler);
-            createCompilerArgsList();
+            createCompilerArgsList(projectConfig);
 
             m_file.WriteLine("C_COMPILER = " + projectConfig.CCompiler);
             m_file.WriteLine("");
@@ -116,14 +116,17 @@ namespace MakeItSo
 		/// <summary>
 		///	Creates the build arguments string.
 		///	</summary>
-        private void createCompilerArgsList()
+        private void createCompilerArgsList(MakeItSoConfig_Project projectConfig)
         {
             String ArgsString = "";
 
-            foreach(String Arg in MakeItSoConfig.Instance.getProjectConfig(m_projectInfo.Name).SolutionConfig.BuildArguments)
-            {
-                ArgsString += " -" + Arg;
-            }
+            if (projectConfig.SolutionConfig.BuildArguments != null)
+			{
+				foreach (String Arg in projectConfig.SolutionConfig.BuildArguments)
+				{
+                    ArgsString += " -" + Arg;
+                }
+			}
 
             m_file.WriteLine(ArgsString);
         }
