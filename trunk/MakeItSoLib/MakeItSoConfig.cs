@@ -167,14 +167,12 @@ namespace MakeItSoLib
             foreach (string arg in args)
             {
                 // Does the arg look like we expect?
-                List<string> tokens = Utils.split(arg, '=');
-                if (tokens.Count != 2)
-                {
-                    showHelp = true;
-                    continue;
-                }
+                //List<string> tokens = Utils.split(arg, '=');
+                string[] tokens = arg.Split(new char[]{'='}, 2);
+
                 string option = tokens[0].ToLower();
                 string value = tokens[1].ToLower();
+
                 if (option.StartsWith("-") == false)
                 {
                     showHelp = true;
@@ -209,10 +207,10 @@ namespace MakeItSoLib
                 Log.log("MakeItSo converts Visual Studio solutions to Linux gcc makefiles");
                 Log.log("See http://code.google.com/p/make-it-so/");
                 Log.log("Command-line:");
-                Log.log("   (empty command-line)    Converts the .sln file in the working folder, if there is one.");
-                Log.log("   -file=[solution-file]   Converts the solution specified.");
-                Log.log("   -cygwin=[True/False]    Creates a cygwin makefile if True. Defaults to False.");
-                Log.log("   -build-args=[arg1,arg2,...]      Add build arguments to gcc");
+                Log.log("   (empty command-line)            Converts the .sln file in the working folder, if there is one.");
+                Log.log("   -file=[solution-file]           Converts the solution specified.");
+                Log.log("   -cygwin=[True/False]            Creates a cygwin makefile if True. Defaults to False.");
+                Log.log("   -build-args=[arg1,arg2,...]     Adds build arguments to gcc");
 
                 m_convertSolution = false;
             }
