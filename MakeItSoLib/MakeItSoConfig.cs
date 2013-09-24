@@ -163,40 +163,46 @@ namespace MakeItSoLib
             // We are expecting arguments to look like:
             // -[option]=[value]
 
-            // We parse each command-line argument...
-            foreach (string arg in args)
+            if (args[0] == "-help" || args[0] == "/?")
+                showHelp = true;
+
+            else
             {
-                // Does the arg look like we expect?
-                //List<string> tokens = Utils.split(arg, '=');
-                string[] tokens = arg.Split(new char[]{'='}, 2);
-
-                string option = tokens[0].ToLower();
-                string value = tokens[1].ToLower();
-
-                if (option.StartsWith("-") == false)
+                // We parse each command-line argument...
+                foreach (string arg in args)
                 {
-                    showHelp = true;
-                    continue;
-                }
+                    // Does the arg look like we expect?
+                    //List<string> tokens = Utils.split(arg, '=');
+                    string[] tokens = arg.Split(new char[] { '=' }, 2);
 
-                // We parse the options...
-                switch (option)
-                {
-                    case "-file":
-                        parseCommandLine_File(value);
-                        break;
+                    string option = tokens[0].ToLower();
+                    string value = tokens[1].ToLower();
 
-                    case "-cygwin":
-                        parseCommandLine_Cygwin(value);
-                        break;
-
-                    case "-build-args":
-                        parseCommandLine_BuildArgs(value);
-                        break;
-
-                    default:
+                    if (option.StartsWith("-") == false)
+                    {
                         showHelp = true;
-                        break;
+                        continue;
+                    }
+
+                    // We parse the options...
+                    switch (option)
+                    {
+                        case "-file":
+                            parseCommandLine_File(value);
+                            break;
+
+                        case "-cygwin":
+                            parseCommandLine_Cygwin(value);
+                            break;
+
+                        case "-build-args":
+                            parseCommandLine_BuildArgs(value);
+                            break;
+
+                        default:
+                            showHelp = true;
+                            break;
+                    }
                 }
             }
 
@@ -204,13 +210,16 @@ namespace MakeItSoLib
             {
                 // The command-line is in a format we don't recognize, so
                 // we show the help text, and set MakeItSo not to run...
+                Log.log("----------------------------------------------------------------------------------");
                 Log.log("MakeItSo converts Visual Studio solutions to Linux gcc makefiles");
                 Log.log("See http://code.google.com/p/make-it-so/");
+                Log.log("");
                 Log.log("Command-line:");
                 Log.log("   (empty command-line)            Converts the .sln file in the working folder, if there is one.");
                 Log.log("   -file=[solution-file]           Converts the solution specified.");
                 Log.log("   -cygwin=[True/False]            Creates a cygwin makefile if True. Defaults to False.");
                 Log.log("   -build-args=[arg1,arg2,...]     Adds build arguments to gcc");
+                Log.log("---------------------------------------------------------------------------------");
 
                 m_convertSolution = false;
             }
