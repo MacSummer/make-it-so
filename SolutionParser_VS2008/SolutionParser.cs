@@ -115,6 +115,13 @@ namespace SolutionParser_VS2008
             // We get the project name...
             string projectName = Utils.call(() => (project.Name));
 
+            // We check if the project is loaded in the solution
+            if (Utils.call(() => project.Object) == null && Utils.call(() => project.UniqueName) != "<MiscFiles>")
+			{
+				Log.log("Warning: " + projectName + " is currently unloaded in the solution! No conversion performed");
+				return;
+			}
+
             // We check if this project is a kind we know how to convert...
             string strProjectType = Utils.call(() => (project.Kind));
             ProjectType eProjectType = convertProjectTypeToEnum(strProjectType);
