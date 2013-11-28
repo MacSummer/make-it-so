@@ -34,11 +34,17 @@ namespace SolutionParser_VS2008
 
                 // We get the project name...
                 m_projectInfo.Name = Utils.call(() => (m_dteProject.Name));
-                Log.log("- parsing project " + m_projectInfo.Name);
+                
+                if (MakeItSoConfig.Instance.ignoreProject(m_projectInfo.Name) == true)
+                    Log.log("- project " + m_projectInfo.Name + "ignored");
+                else
+                {
+                    Log.log("- parsing project " + m_projectInfo.Name);
 
-                // and parse the project...
-                parseProject();
-                Log.log("  - done");
+                    // and parse the project...
+                    parseProject();
+                    Log.log("  - done");
+                }
             }
             catch (Exception ex)
             {
